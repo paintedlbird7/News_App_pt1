@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
@@ -48,8 +51,100 @@
             android:layout_height="320dp"
             android:layout_centerInParent="true"
             android:alpha="0.75"
-            app:srcCompat="@drawable/ic_android_black_24dp" />
+            android:src="@drawable/ic_android_black_24dp" />
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="49dp" />
     </RelativeLayout>
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/news_no_network_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <ImageView
+            android:id="@+id/no_network"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_centerInParent="true"
+            android:alpha="0.85"
+            android:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/no_network_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="no network available"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/please_check_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no_network_message"
+            android:layout_centerHorizontal="true"
+            android:text="Please check network settings and refresh"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="italic" />
+    </RelativeLayout>
+
+
+<RelativeLayout
+    android:id="@+id/emtpy_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_centerInParent="true"
+        android:alpha="0.85"
+        android:src="@drawable/ic_android_black_24dp" />
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/news_no_news_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_centerInParent="true"
+        android:alpha="0.05"
+        android:src="@drawable/ic_android_black_24dp" />
+
+    <TextView
+        android:id="@+id/no_news_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="no news available"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/please_check_later"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/no_news_message"
+        android:layout_centerHorizontal="true"
+        android:text="please check later or refresh"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"/>
+</RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>

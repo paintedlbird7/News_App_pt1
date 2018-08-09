@@ -10,6 +10,9 @@ public class News {
         this.articleUrl = articleUrl;
     }
 
+    public News(String author, long time, String url, long location, long time1, String url1) {
+    }
+
     public String getArticleTitle() {
         return articleTitle;
     }
@@ -24,5 +27,8 @@ public class News {
 
     public String getArticleUrl() {
         return articleUrl;
+    }
+
+    public void add() {
     }
 }
